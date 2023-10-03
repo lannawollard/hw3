@@ -19,7 +19,7 @@ while ($store = $stores->fetch_assoc()){
     <td><?php echo $store['store_name']; ?></td>
     <td><?php echo $store['store_location']; ?></td>
     <td><?php echo $store['store_size']; ?></td>
-    <td><a href="manages-what-store.php">Manages</a></td>
+    <td><a href="manages-what-store.php?id=<?php echo $store['store_id']; ?>">Manages</a></td>
   </tr>
 <?php
 }
