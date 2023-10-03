@@ -1,6 +1,6 @@
 <?php
 require_once("util-db.php");
-require_once("model-managers.php);
+require_once("model-managers.php");
 
 $pageTitle = "Managers";
 include "view-header.php";
