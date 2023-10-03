@@ -6,6 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Time</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>      
@@ -16,6 +17,12 @@ while ($manager = $managers->fetch_assoc()){
     <td><?php echo $manager['manager_id']; ?></td>
     <td><?php echo $manager['manager_name']; ?></td>
     <td><?php echo $manager['manager_time']; ?></td>
+    <td>
+      <form method="post" action="level-where-manager.php">
+        <input type="hidden" name="mid" value="<?php echo $manager['manager_id']; ?>">
+         <button type="submit" class="btn btn-primary">Levels</button>
+      </form>
+    </td>
   </tr>
 <?php
 }
