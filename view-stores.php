@@ -7,6 +7,7 @@
       <th>Name</th>
       <th>Location</th>
       <th>Size</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>      
@@ -18,6 +19,7 @@ while ($store = $stores->fetch_assoc()){
     <td><?php echo $store['store_name']; ?></td>
     <td><?php echo $store['store_location']; ?></td>
     <td><?php echo $store['store_size']; ?></td>
+    <td><a href="manages-what-store.php">Manages</a></td>
   </tr>
 <?php
 }
