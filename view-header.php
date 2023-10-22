@@ -28,6 +28,9 @@
         <li class="nav-item">
           <a class="nav-link" href="stores-with-managers.php">Stores with managers</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedule.php">Schedule</a>
+        </li>
       </ul>
     </div>
   </div>
