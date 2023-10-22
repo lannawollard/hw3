@@ -4,7 +4,7 @@ require_once("model-schedule.php");
 
 $pageTitle = "Schedules";
 include "view-header.php";
-$stores = selectSchedule();
+$schedules = selectSchedule();
 include "view-schedule.php";
 include "view-footer.php";
 ?>
