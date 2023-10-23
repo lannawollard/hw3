@@ -31,6 +31,9 @@ while ($store = $stores->fetch_assoc()){
     <td><?php echo $store['store_location']; ?></td>
     <td><?php echo $store['store_size']; ?></td>
     <td>
+<?php
+include "view-stores-editform.php";
+?>
     </td>
     <td> 
       <form method="post" action="">
