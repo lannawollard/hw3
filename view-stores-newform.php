@@ -28,6 +28,7 @@
               <label for="sSize" class="form-label">Store Size</label>
               <input type="text" class="form-control" id="sSize" name="sSize">
             </div>
+              <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
