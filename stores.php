@@ -21,6 +21,13 @@ if (isset($_POST['actionType'])){
       echo '<div class="alert alert-danger" role="alert">Error</div>';
     }
     break;
+    case "Edit":
+    if (updateStore($_POST['sName'], $_POST['sLocation'], $_POST['sSize'], $_POST['sid'])) {
+      echo '<div class="alert alert-success" role="alert">Store edited</div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert">Error</div>';
+    }
+    break;
   }
 }
 $stores = selectStores();
