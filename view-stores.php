@@ -32,11 +32,16 @@ while ($store = $stores->fetch_assoc()){
     <td><?php echo $store['store_size']; ?></td>
     <td>
     </td>
-    <td>
+    <td> 
+      <form method="post" action="manages-what-store.php">
+        <input type="hidden" name="sid" value="<?php echo $store['store_id']; ?>">
+         <button type="submit" class="btn btn-primary">
+         </button>
+      </form>
     </td>
     <td> 
       <form method="post" action="manages-what-store.php">
-        <input type="hidden" name="mid" value="<?php echo $store['store_id']; ?>">
+        <input type="hidden" name="sid" value="<?php echo $store['store_id']; ?>">
          <button type="submit" class="btn btn-primary">Manages</button>
       </form>
     </td>
