@@ -20,27 +20,23 @@
             <label for="iid<?php echo $manager['level_id']; ?>" class="form-label">Store</label>
 <?php
 $instructorList = selectStoresForInput();
-$selectedInstructor = $course['instructor_id'];
-include "view-instructor-input-list.php";
+$selectedInstructor = $manager['store_id'];
+include "view-store-input-list.php";
 ?>
           </div>
           <div class="mb-3">
-            <label for="cid<?php echo $course['section_id']; ?>" class="form-label">Course</label>
-            <input type="text" class="form-control" id="cid<?php echo $course['section_id']; ?>" name="cid" value="<?php echo $course['course_id']; ?>">
+            <label for="cid<?php echo $manager['level_id']; ?>" class="form-label">Managers</label>
+            <input type="text" class="form-control" id="mid<?php echo $manager['level_id']; ?>" name="mid" value="<?php echo $manager['manager_id']; ?>">
           </div>
           <div class="mb-3">
-            <label for="sem<?php echo $course['section_id']; ?>" class="form-label">Semester</label>
-            <input type="text" class="form-control" id="sem<?php echo $course['section_id']; ?>" name="sem" value="<?php echo $course['semester']; ?>">
+            <label for="sem<?php echo $manager['level_id']; ?>" class="form-label">Floor</label>
+            <input type="text" class="form-control" id="sem<?php echo $manager['level_id']; ?>" name="floor" value="<?php echo $manager['floor']; ?>">
           </div>
           <div class="mb-3">
-            <label for="room<?php echo $course['section_id']; ?>" class="form-label">Room</label>
-            <input type="text" class="form-control" id="room<?php echo $course['section_id']; ?>" name="room" value="<?php echo $course['room']; ?>">
+            <label for="room<?php echo $manager['level_id']; ?>" class="form-label">Hours</label>
+            <input type="text" class="form-control" id="hours<?php echo $manager['level_id']; ?>" name="hours" value="<?php echo $manager['hours']; ?>">
           </div>
-          <div class="mb-3">
-            <label for="daytime<?php echo $course['section_id']; ?>" class="form-label">Day/ time</label>
-            <input type="text" class="form-control" id="daytime<?php echo $course['section_id']; ?>" name="daytime" value="<?php echo $course['day_time']; ?>">
-          </div>
-            <input type="hidden" name="sid" value="<?php echo $course['section_id']; ?>">
+            <input type="hidden" name="lid" value="<?php echo $manager['level_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
