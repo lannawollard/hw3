@@ -34,7 +34,12 @@ while ($store = $stores->fetch_assoc()){
     </td>
     <td>
     </td>
-    <td><a href="manages-what-store.php?id=<?php echo $store['store_id']; ?>">Manages</a></td>
+    <td> 
+      <form method="post" action="manages-what-store.php">
+        <input type="hidden" name="mid" value="<?php echo $store['store_id']; ?>">
+         <button type="submit" class="btn btn-primary">Manages</button>
+      </form>
+    </td>
   </tr>
 <?php
 }
