@@ -1,4 +1,12 @@
+<div class="row">
+  <div class="col">
 <h1>Managers</h1>
+    </div>
+  <div class="col-auto">
+<?php
+include "view-managers-newform.php";
+?>
+  </div>
 <div class="table-responsive">
   <table class="table">
     <thead>
