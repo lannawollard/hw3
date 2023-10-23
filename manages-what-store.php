@@ -4,7 +4,7 @@ require_once("model-manages-what-store.php");
 
 $pageTitle = "Manages what store";
 include "view-header.php";
-$managers = selectManagesWhatStore($_GET['mid']);
+$managers = selectManagesWhatStore($_GET['id']);
 include "view-manages-what-store.php";
 include "view-footer.php";
 ?>
