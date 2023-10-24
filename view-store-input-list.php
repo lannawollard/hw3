@@ -1,4 +1,4 @@
-<select store="form-select" id="sid" name="sid">
+<select class="form-select" id="sid" name="sid">
 <?php
 while ($storeItem = $storeList->fetch_assoc()) {
   $selText = "";
