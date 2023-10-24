@@ -4,7 +4,7 @@
     </div>
   <div class="col-auto">
 <?php
-include "view-instructors-with-courses-newform.php";
+include "view-stores-with-managers-newform.php";
 ?>
   </div>
 </div>
@@ -28,7 +28,7 @@ while ($store = $stores->fetch_assoc()){
       </div>
       <div class="col-auto">
 <?php
-include "view-instructors-with-courses-editform.php";
+include "view-stores-with-managers-editform.php";
 ?>
           </div>
       <div class="col-auto">
