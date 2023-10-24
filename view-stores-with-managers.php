@@ -51,7 +51,7 @@ include "view-stores-with-managers-editform.php";
         </ul>
       </p>
       <p class="card-text"><small class="text-body-secondary">Location: <?php echo $store['store_location']; ?></small></p>
-    </div>
+  
 <?php
 }
 ?>
