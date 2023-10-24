@@ -16,19 +16,19 @@ while ($store = $stores->fetch_assoc()){
     <div class="card-body">
       <h5 class="card-title"><?php echo $store['store_name']; ?></h5>
       <p class="card-text">
-   <ul class="list-group">
+      <ul class="list-group">
  <?php
-  $managers = selectManagesWhatStore($store['store_id']);
-  while ($manager = $managers->fetch_assoc()){
+   $managers = selectManagesWhatStore($store['store_id']);
+   while ($manager = $managers->fetch_assoc()){
   ?>
-     <li class="list-group-item">
-     <div class="row">
-      <div class="col">
-     <?php echo $manager['manager_name']; ?> - <?php echo $manager['floor']; ?> - <?php echo $manager['hours']; ?></li>
-      </div>
+      <li class="list-group-item">
+      <div class="row">
+       <div class="col">
+         <?php echo $manager['manager_name']; ?> - <?php echo $manager['floor']; ?> - <?php echo $manager['hours']; ?></li>
+       </div>
       <div class="col-auto">
-  <?php
-     include "view-stores-with-managers-editform.php";
+ <?php
+include "view-stores-with-managers-editform.php";
 ?>
       </div>
       <div class="col-auto">
@@ -47,7 +47,7 @@ while ($store = $stores->fetch_assoc()){
     </li>
 <?php
   }
-  ?>
+?>
         </ul>
       </p>
       <p class="card-text"><small class="text-body-secondary">Location: <?php echo $store['store_location']; ?></small></p>
