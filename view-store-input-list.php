@@ -2,7 +2,7 @@
 <?php
 while ($storeItem = $storeList->fetch_assoc()) {
   $selText = "";
-  if ($selectedStore == $instructorStore['store_id']) {
+  if ($selectedStore == $storeItem['store_id']) {
     $selText = " selected";
   }
 ?>
