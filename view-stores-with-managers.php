@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col">
 <h1>Stores with managers</h1>
-      </div>
+    </div>
   <div class="col-auto">
 <?php
-include "view-stores-with-managers-newform.php";
+include "view-instructors-with-courses-newform.php";
 ?>
   </div>
 </div>
@@ -16,24 +16,24 @@ while ($store = $stores->fetch_assoc()){
     <div class="card-body">
       <h5 class="card-title"><?php echo $store['store_name']; ?></h5>
       <p class="card-text">
-      <ul class="list-group">
+   <ul class="list-group">
  <?php
-   $managers = selectManagesWhatStore($store['store_id']);
-   while ($manager = $managers->fetch_assoc()){
+  $managers = selectManagesWhatStore($store['store_id']);
+  while ($manager = $managers->fetch_assoc()){
   ?>
-      <li class="list-group-item">
-      <div class="row">
-       <div class="col">
-         <?php echo $manager['manager_name']; ?> - <?php echo $manager['floor']; ?> - <?php echo $manager['hours']; ?></li>
-       </div>
-      <div class="col-auto">
- <?php
-include "view-stores-with-managers-editform.php";
-?>
+     <li class="list-group-item">
+    <div class="row">
+      <div class="col">
+        <?php echo $manager['manager_name']; ?> - <?php echo $manager['floor']; ?> - <?php echo $manager['hours']; ?>
       </div>
       <div class="col-auto">
+<?php
+include "view-instructors-with-courses-editform.php";
+?>
+          </div>
+      <div class="col-auto">
         <form method="post" action="">
-          <input type="hidden" name="lid" value="<?php echo $manager['level_id']; ?>">
+          <input type="hidden" name="sid" value="<?php echo $course['section_id']; ?>">
           <input type="hidden" name="actionType" value="Delete">
           <button type="submit" class="btn" onclick="return confirm('Are you sure?');">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -45,14 +45,15 @@ include "view-stores-with-managers-editform.php";
       </div>
     </div>
     </li>
-<?php
+
+  <?php
   }
-?>
+  ?>
         </ul>
       </p>
       <p class="card-text"><small class="text-body-secondary">Location: <?php echo $store['store_location']; ?></small></p>
     </div>
-   </div>
+  </div>
 <?php
 }
 ?>
