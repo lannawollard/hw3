@@ -26,7 +26,7 @@ function insertSchedule($sMorning, $sNight) {
     }
 }
 
-function updateSchedule($sMorning, $sNight $sid) {
+function updateSchedule($sMorning, $sNight, $sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `schedule` set `schedule_morning` = ?, `schedule_night` = ? where schedule_id = ?");
