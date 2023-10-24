@@ -19,8 +19,8 @@
           <div class="mb-3">
             <label for="iid<?php echo $manager['level_id']; ?>" class="form-label">Store</label>
 <?php
-$instructorList = selectStoresForInput();
-$selectedInstructor = $manager['store_id'];
+$storeList = selectStoresForInput();
+$selectedStore = $manager['store_id'];
 include "view-store-input-list.php";
 ?>
           </div>
