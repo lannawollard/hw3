@@ -41,86 +41,19 @@ include "view-footer.php";
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-<script>
-     var options = {
-          series: [{
-          name: 'Metric1',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric2',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric3',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric4',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric5',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric6',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric7',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric8',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric9',
-          data: generateData(18, {
-            min: 0,
-            max: 90
-          })
-        }
-        ],
-          chart: {
-          height: 350,
-          type: 'heatmap',
-        },
-        dataLabels: {
-          enabled: false
-        },
-        colors: ["#008FFB"],
-        title: {
-          text: 'HeatMap Chart (Single color)'
-        },
-        };
+var options = {
+  chart: {
+    type: 'line'
+  },
+  series: [{
+    name: 'sales',
+    data: [30,40,35,50,49,60,70,91,125]
+  }],
+  xaxis: {
+    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+  }
+}
 
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-</script>
-       
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
