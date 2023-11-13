@@ -41,8 +41,8 @@ include "view-footer.php";
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-
-        var options = {
+<script>
+     var options = {
           series: [{
           name: 'Metric1',
           data: generateData(18, {
@@ -122,3 +122,5 @@ include "view-footer.php";
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
+</script>
+       
