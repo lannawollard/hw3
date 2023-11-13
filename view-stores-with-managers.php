@@ -29,6 +29,8 @@ while ($store = $stores->fetch_assoc()){
 
 
 <script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="$YOUR_PATH/billboard.js"></script>
+<link rel="stylesheet" href="$YOUR_PATH/billboard.css">
 
 <div id="chart"></div>
 <script>
