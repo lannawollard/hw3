@@ -31,9 +31,9 @@ while ($manager = $managers->fetch_assoc()){
   </table>
 </div>
 
-<head>
-	<script src="plotly-2.27.0.min.js" charset="utf-8"></script>
-</head>
+
+<script src="plotly-2.27.0.min.js" charset="utf-8"></script>
+
 
 <div id="tester" style="width:600px;height:250px;"></div>
 <script>
@@ -44,6 +44,5 @@ Plotly.plot( TESTER, [{
     y: [1, 2, 4, 8, 16] }], { 
     margin: { t: 0 } }, {showSendToCloud:true} );
 
-/* Current Plotly.js version */
 console.log( Plotly.BUILD );	
 </script>
