@@ -44,7 +44,8 @@ include "view-footer.php";
 <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
 <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+<script>
+    import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
 
 const renderLineChart = (
@@ -55,3 +56,5 @@ const renderLineChart = (
     <YAxis />
   </LineChart>
 );
+
+</script>
