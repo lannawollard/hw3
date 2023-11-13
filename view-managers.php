@@ -36,6 +36,7 @@ while ($manager = $managers->fetch_assoc()){
 </head>
 
 <div id="tester" style="width:600px;height:250px;"></div>
+<script>
 TESTER = document.getElementById('tester');
 
 Plotly.plot( TESTER, [{
@@ -44,4 +45,5 @@ Plotly.plot( TESTER, [{
     margin: { t: 0 } }, {showSendToCloud:true} );
 
 /* Current Plotly.js version */
-console.log( Plotly.BUILD );
+console.log( Plotly.BUILD );	
+</script>
