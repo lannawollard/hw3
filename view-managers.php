@@ -31,20 +31,17 @@ while ($manager = $managers->fetch_assoc()){
   </table>
 </div>
 
+<head>
+	<script src="plotly-2.27.0.min.js" charset="utf-8"></script>
+</head>
 
-<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
-<script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
-<div>
-  import { LineChart, Line } from 'recharts';
-const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
+<div id="tester" style="width:600px;height:250px;"></div>
+TESTER = document.getElementById('tester');
 
-const renderLineChart = (
-  <LineChart width={400} height={400} data={data}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-  </LineChart>
-);
+Plotly.plot( TESTER, [{
+    x: [1, 2, 3, 4, 5],
+    y: [1, 2, 4, 8, 16] }], { 
+    margin: { t: 0 } }, {showSendToCloud:true} );
 
-</div>
-
+/* Current Plotly.js version */
+console.log( Plotly.BUILD );
