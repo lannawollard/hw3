@@ -1,8 +1,4 @@
-<div>
-  <canvas id="myChart"></canvas>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 
@@ -14,6 +10,11 @@ include "view-header.php";
 <?php
 include "view-footer.php";
 ?>
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
   const ctx = document.getElementById('myChart');
