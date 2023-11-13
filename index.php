@@ -39,20 +39,28 @@ include "view-footer.php";
   });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<html>
+  <head>
+    <title>My first Chartist Tests</title>
+    <link rel="stylesheet"
+          href="bower_components/chartist/dist/chartist.min.css">
+  </head>
+  <body>
+    <!-- Site content goes here !-->
+    <script src="bower_components/chartist/dist/chartist.min.js"></script>
+  </body>
+</html>
 
-var options = {
-  chart: {
-    type: 'line'
-  },
-  series: [{
-    name: 'sales',
-    data: [30,40,35,50,49,60,70,91,125]
-  }],
-  xaxis: {
-    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-  }
-}
+<div class="ct-chart ct-perfect-fourth"></div>
+var data = {
+   [
+    [5, 2, 4, 2, 0]
+  ]
+};
+
+
+new Chartist.Line('.ct-chart', data);
+
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 
