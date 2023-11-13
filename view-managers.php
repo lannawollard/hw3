@@ -30,3 +30,21 @@ while ($manager = $managers->fetch_assoc()){
     </tbody>
   </table>
 </div>
+
+
+<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+<script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
+<div>
+  import { LineChart, Line } from 'recharts';
+const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
+
+const renderLineChart = (
+  <LineChart width={400} height={400} data={data}>
+    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+  </LineChart>
+);
+
+</div>
+
