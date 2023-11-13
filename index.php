@@ -39,6 +39,7 @@ include "view-footer.php";
   });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 
         var options = {
