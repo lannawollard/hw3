@@ -34,8 +34,8 @@ while ($store = $stores->fetch_assoc()){
 <script src="$YOUR_PATH/billboard.js"></script>
 
 <div id="chart"></div>
-
-bb.generate({
+<script>
+   bb.generate({
     bindto: "#chart",
     data: {
         columns: [
@@ -52,6 +52,6 @@ bb.generate({
         }
     }
 });
-
+</script>
 
 
