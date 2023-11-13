@@ -35,7 +35,8 @@ while ($store = $stores->fetch_assoc()){
 
 <div id="chart"></div>
 <script>
-   bb.generate({
+   bb.generate
+({
     bindto: "#chart",
     data: {
         columns: [
