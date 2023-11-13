@@ -32,7 +32,8 @@ while ($manager = $managers->fetch_assoc()){
 </div>
 
 
-<script src="plotly-2.27.0.min.js" charset="utf-8"></script>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+
 
 
 <div id="tester" style="width:600px;height:250px;"></div>
