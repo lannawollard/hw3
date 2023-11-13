@@ -29,26 +29,25 @@ while ($store = $stores->fetch_assoc()){
 
 
 <script src="https://d3js.org/d3.v6.min.js"></script>
-
-
-<script src="$YOUR_PATH/billboard.js"></script>
-
-<div id="areaChart"></div>
+<script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
+<div id="chart"></div>
 <script>
-var chart = bb.generate({
-  data: {
-    columns: [
-	["data1", 300, 350, 300, 0, 0, 0],
-	["data2", 130, 100, 140, 200, 150, 50]
-    ],
-    types: {
-      data1: "area", // for ESM specify as: area()
-      data2: "area-spline", // for ESM specify as: areaSpline()
+	bb.generate({
+    bindto: "#chart",
+    data: {
+        columns: [
+            ["data1", 30, 200, 100, 170, 150, 250],
+            ["data2", 130, 100, 140, 35, 110, 50]
+        ],
+        types: {
+          data1: "line",
+          data2: "area-spline"
+        },
+        colors: {
+          data1: "red",
+          data2: "green"
+        }
     }
-  },
-  bindto: "#areaChart"
 });
-
 </script>
-
-
