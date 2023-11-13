@@ -39,29 +39,3 @@ include "view-footer.php";
   });
 </script>
 
-<html>
-  <head>
-    <title>My first Chartist Tests</title>
-    <link rel="stylesheet"
-          href="bower_components/chartist/dist/chartist.min.css">
-  </head>
-  <body>
-    <!-- Site content goes here !-->
-    <script src="bower_components/chartist/dist/chartist.min.js"></script>
-  </body>
-</html>
-
-<div class="ct-chart ct-perfect-fourth"></div>
-var data = {
-   [
-    [5, 2, 4, 2, 0]
-  ]
-};
-
-
-new Chartist.Line('.ct-chart', data);
-
-
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-chart.render();
