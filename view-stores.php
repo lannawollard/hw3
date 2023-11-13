@@ -29,7 +29,8 @@ while ($store = $stores->fetch_assoc()){
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-var options = {
+<script>
+ var options = {
   chart: {
     type: 'line'
   },
@@ -44,5 +45,7 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 
-chart.render();
+chart.render(); 
+</script>
+
 
