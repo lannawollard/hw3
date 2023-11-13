@@ -30,12 +30,8 @@ while ($store = $stores->fetch_assoc()){
 
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
-
-<script src="$YOUR_PATH/billboard.js"></script>
 <div id="gaugeChart"></div>
 <script>
-
-
 var chart = bb.generate({
   data: {
     columns: [
