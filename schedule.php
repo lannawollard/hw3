@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      if (updateSchedule($_POST['sMorningr'], $_POST['sNight'], $_POST['sid'])) {
+      if (updateSchedule($_POST['sMorning'], $_POST['sNight'], $_POST['sid'])) {
         echo '<div class="alert alert-success" role="alert">Schedule edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
